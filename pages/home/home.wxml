@@ -1,0 +1,31 @@
+<!--pages/home/home.wxml-->
+<view>
+  <view class='logo-wrap'>
+    <image src='{{logo}}' class='logo'></image>
+  </view>
+  <view>
+    <swiper indicator-dots="true" autoplay="true" class='page-image-wrap'>
+      <block wx:for="{{nav_pagers}}">
+        <swiper-item>
+          <image src="{{item}}" class='page-image' mode='aspectFill' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view style='height:30rpx'></view>
+  <view wx:for="{{contents}}">
+    <text class='content-tip'>{{item.tip}}</text>
+    <view class='content-tip-line'> </view>
+    <text class='content-tip-en'>{{item.tip_en}}</text>
+    <text class='content-des'>{{item.des}}</text>
+    <image class='content-img' src="{{item.img}}" mode='aspectFill' />
+  </view>
+  <view>
+    <text class='content-tip'>{{product.tip}}</text>
+    <view class='content-tip-line'> </view>
+    <text class='content-tip-en'>{{product.tip_en}}</text>
+    <view>
+      <image wx:for="{{product.img}}" class='content-img' src="{{item}}" mode='aspectFill' />
+    </view>
+  </view>
+</view>

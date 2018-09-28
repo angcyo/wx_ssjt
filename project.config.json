@@ -4,15 +4,15 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
-	"appid": "wxc5988278453e288c",
+	"libVersion": "2.3.0",
+	"appid": "wx5c272fd05573f561",
 	"projectname": "wx",
 	"debugOptions": {
 		"hidedInDevtools": []

@@ -9,5 +9,6 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+    <progress percent="60" color="pink" />
   </view>
 </view>

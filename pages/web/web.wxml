@@ -1,0 +1,2 @@
+<!--pages/web.wxml-->
+<web-view src="http://www.gongzhujia.com.cn/"></web-view>

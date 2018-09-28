@@ -1,5 +1,8 @@
 <!--logs.wxml-->
+<switch wx:for-items="objectArray" wx:key="unique" style="display: block;"> {{index}}:{{item}} </switch>
+<block wx:for-items="array">{{index}}{{item}} </block>
 <view class="container log-list">
+b
   <block wx:for="{{logs}}" wx:for-item="log">
     <text class="log-item">{{index + 1}}. {{log}}</text>
   </block>
