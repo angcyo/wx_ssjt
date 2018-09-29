@@ -1,11 +1,10 @@
 {
   "pages": [
-    "pages/news/news",
     "pages/home/home",
+    "pages/news/news",
     "pages/index/index",
     "pages/logs/logs",
     "pages/web/web"
-   
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -15,18 +14,21 @@
     "enablePullDownRefresh": true
   },
   "tabBar": {
+    "backgroundColor": "#FE7272",
+    "color": "#999999",
+    "selectedColor": "#FFF",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "iconPath": "images/side_icon01.png",
+        "selectedIconPath": "images/side_icon01.png",
+        "pagePath": "pages/home/home",
         "text": "首页"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
-      },
-      {
-        "pagePath": "pages/web/web",
-        "text": "网页"
+        "iconPath": "images/side_icon03.png",
+        "selectedIconPath": "images/side_icon01.png",
+        "pagePath": "pages/news/news",
+        "text": "资讯"
       }
     ],
     "position": "bottom"
