@@ -18,14 +18,14 @@
     <view class='content-tip-line'> </view>
     <text class='content-tip-en'>{{item.tip_en}}</text>
     <text class='content-des'>{{item.des}}</text>
-    <image class='content-img' src="{{item.img}}" mode='aspectFill' />
+    <image class='content-img' src="{{item.img}}" mode='widthFix' />
   </view>
   <view>
     <text class='content-tip'>{{product.tip}}</text>
     <view class='content-tip-line'> </view>
     <text class='content-tip-en'>{{product.tip_en}}</text>
     <view>
-      <image wx:for="{{product.img}}" class='content-img' src="{{item}}" mode='aspectFill' />
+      <image wx:for="{{product.img}}" class='product-img' src="{{item}}" mode='widthFix' />
     </view>
   </view>
 </view>

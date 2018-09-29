@@ -1,0 +1,17 @@
+<!--pages/news/news.wxml-->
+<!-- <text>pages/news/news.wxml</text> -->
+<!-- <image src='https://www.gongzhujia.com.cn/Public/Uploads/Content/5bade5c2a71ac.jpeg'></image> -->
+<view class='news-page'>
+  <navigator wx:for='{{news}}' class='news-item' url='../home/home'>
+    <view class='news-contain'>
+      <view class='news-img-wrap'>
+        <image src='{{item.img}}' class='news-img' mode='aspectFill'></image>
+      </view>
+      <view class='news-content-wrap'>
+        <text class='news-title'>{{item.title}}</text>
+        <text class='news-time'>{{item.time}}</text>
+      </view>
+    </view>
+    <text class='news-content'>{{item.content}}</text>
+  </navigator>
+</view>

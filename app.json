@@ -1,9 +1,11 @@
 {
   "pages": [
+    "pages/news/news",
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs",
     "pages/web/web"
+   
   ],
   "window": {
     "backgroundTextStyle": "dark",

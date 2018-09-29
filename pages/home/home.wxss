@@ -60,7 +60,11 @@
 
 .content-img {
   width: 100%;
-  height: 300rpx;
+}
+
+.product-img {
+  width: 100%;
+  margin: 0;
 }
 
 /* .logo-wrap::after {
