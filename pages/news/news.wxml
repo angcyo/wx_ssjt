@@ -2,7 +2,14 @@
 <!-- <text>pages/news/news.wxml</text> -->
 <!-- <image src='https://www.gongzhujia.com.cn/Public/Uploads/Content/5bade5c2a71ac.jpeg'></image> -->
 <view class='news-page'>
-  <navigator wx:for='{{news}}' class='news-item' url='../home/home'>
+  <view class='news-type'>
+    <text class="news-type-item {{ newsType == 1 ? 'news-type-item-selector':''}}" bindtap='setNewsType' id='1'>品牌资讯</text>
+    <text class="news-type-item {{ newsType == 2 ? 'news-type-item-selector':''}}" bindtap='setNewsType' id='2'>品牌新闻</text>
+    <text class="news-type-item {{ newsType == 3 ? 'news-type-item-selector':''}}" bindtap='setNewsType' id='3'>行业新闻</text>
+    <text class="news-type-item {{ newsType == 4 ? 'news-type-item-selector':''}}" bindtap='setNewsType' id='4'>公司新闻</text>
+  </view>
+
+  <navigator wx:for='{{news}}' class='news-item' url='../detail/detail?url={{item.link}}&title={{item.title}}'>
     <view class='news-contain'>
       <view class='news-img-wrap'>
         <image src='{{item.img}}' class='news-img' mode='aspectFill'></image>
@@ -14,4 +21,6 @@
     </view>
     <text class='news-content'>{{item.content}}</text>
   </navigator>
+
+  <text wx:if="{{isLoadMore}}" class='load-more'>正在加载更多...</text>
 </view>

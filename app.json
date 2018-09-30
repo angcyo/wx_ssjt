@@ -1,10 +1,13 @@
 {
   "pages": [
+    
     "pages/home/home",
     "pages/news/news",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/web/web"
+    "pages/web/web",
+    "pages/detail/detail",
+    "pages/product/product"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -15,7 +18,7 @@
   },
   "tabBar": {
     "backgroundColor": "#FE7272",
-    "color": "#999999",
+    "color": "#ddd",
     "selectedColor": "#FFF",
     "list": [
       {
@@ -26,7 +29,7 @@
       },
       {
         "iconPath": "images/side_icon03.png",
-        "selectedIconPath": "images/side_icon01.png",
+        "selectedIconPath": "images/side_icon03.png",
         "pagePath": "pages/news/news",
         "text": "资讯"
       }

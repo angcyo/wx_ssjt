@@ -1,0 +1,6 @@
+/* pages/product/product.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+.image{
+  width: 100%;
+}

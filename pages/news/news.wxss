@@ -1,5 +1,12 @@
 /* pages/news/news.wxss */
 
+.load-more {
+  display: block;
+  text-align: center;
+  padding: 10rpx;
+  font-size: 26rpx;
+}
+
 .news-page {
   padding-top: 10rpx;
   background-color: #f9f9f9;
@@ -53,4 +60,31 @@
 .news-content {
   color: #999;
   font-size: 26rpx;
+}
+
+.news-type {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  padding-bottom: 10rpx;
+  /* position: fixed; */
+}
+
+.news-type-item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: center;
+  margin: 10rpx;
+  padding: 10rpx;
+  background-color: #999;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  color: #fff;
+}
+
+.news-type-item-selector {
+  background-color: #fe7272;
 }

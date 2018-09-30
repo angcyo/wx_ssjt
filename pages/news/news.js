@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isLoadMore: false,
+    newsType: 1,
     page: 1,
     news: []
   },
@@ -13,17 +15,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    this.loadFirst()
+  },
+
+  loadFirst: function() {
     wx.showToast({
       icon: 'loading',
       title: '加载中...',
     })
     this.data.page = 1
-    getNews(this.data.page, (res) => {
+    getNews(this.data.page, this.data.newsType, (res) => {
       this.setData({
-        news: res.data
+        news: res.data,
+        isLoadMore: true
       })
     })
-
   },
 
   /**
@@ -59,7 +65,7 @@ Page({
    */
   onPullDownRefresh: function() {
     this.data.page = 1
-    getNews(this.data.page, (res) => {
+    getNews(this.data.page, this.data.newsType, (res) => {
       this.setData({
         news: res.data
       })
@@ -72,12 +78,12 @@ Page({
    */
   onReachBottom: function() {
     var page = this.data.page + 1
-    getNews(page, (res) => {
+    getNews(page, this.data.newsType, (res) => {
       // console.log('加载更多:' + page)
       // console.log(res.data)
       // console.log(this.data.news)
       this.setData({
-        news: this.data.news.concat(res.data)
+        news: this.data.news.concat(res.data),
       })
       this.data.page = page
     })
@@ -88,11 +94,19 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+
+  setNewsType: function(event) {
+    //console.log(event.currentTarget.id)
+    this.setData({
+      newsType: event.currentTarget.id
+    })
+    this.loadFirst()
   }
 })
 
-function getNews(p, s) {
-  console.log('获取新闻页:' + p)
+function getNews(p, t, s) {
+  console.log('获取新闻页:' + p + " :" + t)
   wx.request({
     url: 'https://www.angcyo.com/wx/get_news',
     method: 'post',
@@ -100,7 +114,8 @@ function getNews(p, s) {
       'content-type': 'application/x-www-form-urlencoded'
     },
     data: {
-      page: p
+      page: p,
+      newsType: t
     },
     success: s
   })

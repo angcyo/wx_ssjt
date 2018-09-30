@@ -8,3 +8,10 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.progress {
+  height: 1rpx;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
